@@ -19,8 +19,9 @@ class TwitterAuth():
         self.auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
         self.api = tweepy.API(self.auth)
 
+T = TwitterAuth('LznjZYxHjVstT1OmgH2zEZ5oZ', 'yYNA43vMh2AaJZ6JQD23lumaaT7v1scXxPgBWPG872GCqFFYIX', '741106254270058496-Fm7WrySrZ7RYgCX059NGr6bOcmH0RWP', 'OyXKEUvJgmIPF712pogJsFKwuwS9U59drIqefhEughBFP')
 
-T = TwitterAuth('xxxx', 'xxxxxxxxx', 'xxxxxxx', 'xxxxxxx')
+#T = TwitterAuth('xxxx', 'xxxxxxxxx', 'xxxxxxx', 'xxxxxxx')
 
 auth = T.auth
 
