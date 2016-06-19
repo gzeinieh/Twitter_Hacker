@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>User Name:
+        <dd><input type=text size=30 name=word>
+        <dd><input type=submit value=Submit>
+      </dl>
+    </form>
+    <ul class=entries>
+      {% for entry in entries %}
+      <li><h2>{{ entry.date_time }}</h2>{{ entry.tweet|safe }}
+      {% else %}
+      <li><em>Unbelievable.  No tweets here so far</em>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}
